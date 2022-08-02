@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
+using WMPLib;
 
 namespace Project
 {
@@ -11,20 +14,22 @@ namespace Project
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!!!!!!!!!!");
-            int num = 1000;
             Console.ForegroundColor = ConsoleColor.Green;
-            
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
 
-            for (int i = 0; i <= 1000; i++)
+            wplayer.URL = "music.mp3";
+            wplayer.controls.play();
+
+
+            for (int i = 1000; i > 2; i -= 3)
             {
-                
-                num = num - 7;
-
-                Console.WriteLine(num);
-                Thread.Sleep(30);
+                Console.WriteLine(i + " - 7 = " + (i - 7));
+                System.Threading.Thread.Sleep(50);
             }
 
-
+            Console.WriteLine("Im Ghoul...");
+            Console.ReadKey();
         }
+
     }
 }
