@@ -13,7 +13,8 @@ namespace Project
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!!!!!!!!!!");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Welcome To My little Programm!");
             Console.ForegroundColor = ConsoleColor.Green;
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
 
@@ -24,10 +25,12 @@ namespace Project
             for (int i = 1000; i > 2; i -= 3)
             {
                 Console.WriteLine(i + " - 7 = " + (i - 7));
-                System.Threading.Thread.Sleep(50);
+                System.Threading.Thread.Sleep(60);
             }
-
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine("Im Ghoul...");
+
             Console.ReadKey();
         }
 
